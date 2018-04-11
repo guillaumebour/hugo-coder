@@ -1,7 +1,7 @@
 @bg-color: #fefefe;
 @fg-color: #323232;
 @darker-bg-color: #dcdcdc;
-@darker-fg-color: #000;
+@darker-fg-color: #272822;
 
 
 *,
@@ -105,12 +105,17 @@ pre {
   margin: 1.6rem 0 1.0rem 0;
   padding: 1.6rem;
   overflow-x: auto;
+  background-color: @darker-fg-color;
 }
 
 code {
-  background-color: @darker-fg-color;
   color: @bg-color;
   padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+}
+
+p > code {
+  color: @darker-fg-color;
+  font-weight: bold;
 }
 
 blockquote {
