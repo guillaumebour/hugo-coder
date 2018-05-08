@@ -376,3 +376,44 @@ img {
     column-count: 1;
   }
 }
+
+.map {
+  height: 400px;
+  width: 100%;
+}
+
+.single-img {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 400px;
+}
+
+
+.left {
+  float: left;
+  width: 49%;
+}
+.right {
+  float: right;
+  width: 50%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.group:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+.group {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  .left, .right {
+    float: none;
+    width: auto;
+  }
+}

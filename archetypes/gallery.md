@@ -5,5 +5,6 @@ tags = []
 categories = []
 img_path = ""
 place = ""
+display_location = true
 coordinates = ""
 +++

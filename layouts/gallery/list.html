@@ -10,7 +10,7 @@
     <h1 class="title">{{ .Title }}</h1>
     <section id="photos-wall">
       {{ range .Paginator.Pages }}
-      <a href="/images/{{ .Params.Img_name }}" ><img src="/images/{{ .Params.Img_name }}" alt="{{ .Title }}"></a>
+      <a href="{{ .URL }}" ><img src="/images/{{ .Params.Img_name }}" alt="{{ .Title }}"></a>
       {{ end }}
     </section>
     {{ partial "pagination.html" . }}

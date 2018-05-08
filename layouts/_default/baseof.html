@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
     <link rel="stylesheet" href="{{ "css/style.min.css" | absURL }}">
 
+    {{  block "stylesheets" . }}{{ end }}
+
     <link rel="icon" type="image/png" href="{{ "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
 
@@ -27,6 +29,7 @@
     {{ end }}
 
     {{ .Hugo.Generator }}
+
   </head>
 
   <body>
