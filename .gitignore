@@ -1,1 +1,4 @@
 static/css/style.min.css
+exampleSite/content/gallery/[^_]*
+exampleSite/static/images/img*
+.idea/
