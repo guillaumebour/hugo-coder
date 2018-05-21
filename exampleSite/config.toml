@@ -1,7 +1,7 @@
 baseurl = "http://www.example.com"
 title = "johndoe"
 
-theme = "coder"
+theme = "../../../hugo-coder"
 
 languagecode = "en"
 
@@ -36,6 +36,10 @@ pygmentscodefencesguesssyntax = true
     weight = 1
     url  = "/posts/"
 [[menu.main]]
-    name = "About"
+    name = "Gallery"
     weight = 2
+    url  = "/gallery/"
+[[menu.main]]
+    name = "About"
+    weight = 3
     url = "/about/"
