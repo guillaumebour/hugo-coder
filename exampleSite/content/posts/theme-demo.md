@@ -59,3 +59,16 @@ var foo = function (bar) {
 
 console.log(foo(5));
 ```
+
+Or using **highlighted** code:
+
+{{< highlight html >}}
+<section id="main">
+  <div>
+    <h1 id="title">{{ .Title }}</h1>
+    {{ range .Data.Pages }}
+      {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+{{< /highlight >}}
