@@ -8,6 +8,7 @@ languagecode = "en"
 paginate = 20
 canonifyurls = true
 
+# disqusShortname = "yourdiscussshortname"
 
 [params]
     author = "John Doe"

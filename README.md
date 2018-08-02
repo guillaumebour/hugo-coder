@@ -70,6 +70,12 @@ To build your site and test, run:
 hugo server
 ```
 
+### Disqus support
+Copy the following line to your config, ```disqusShortname = "yourdiscussshortname"``` This will enable disqs on all posts.
+ 
+To disable comments for a post, add the following to the page meta data.
+```disable_comments: true```
+
 ## To Do
 
 - Comments (probably not Disqus, sorry)
