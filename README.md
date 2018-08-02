@@ -1,8 +1,29 @@
-# hugo-coder
+# Hugo-coder-photo
 
-A simple and clean blog theme for Hugo.
+This is a simple theme for Hugo. It is based on the [hugo-coder](https://github.com/luizdepra/hugo-coder) theme 
+from Luiz F. A. De Prá. The major difference lies in the gallery feature (see below).
 
-![](https://github.com/luizdepra/hugo-coder/blob/master/images/screenshot.png)
+![](https://github.com/guillaumebour/hugo-coder/blob/master/images/screenshot_3.png)
+
+![](https://github.com/guillaumebour/hugo-coder/blob/master/images/screenshot_4.png)
+
+
+## Features
+
+This theme provides blog posts along with a photo gallery.
+
+![](https://github.com/guillaumebour/hugo-coder/blob/master/images/screenshot_2.png)
+
+### Blog
+
+One can create posts with a support for Math, Code, Table, etc. See the exampleSite for more details.
+
+### Gallery
+
+One can add a location and/or a description to each picture (altering the way a picture is displayed). Note that you may encounter performance issues when trying to load big pictures.
+
+![](https://github.com/guillaumebour/hugo-coder/blob/master/images/screenshot_5.png)
+
 
 ## How to use this theme
 
@@ -13,7 +34,7 @@ To use `hugo-coder` go through the following steps.
 Clone this repository into your Hugo project.
 
 ```
-git clone https://github.com/luizdepra/hugo-coder.git themes/coder
+git clone https://github.com/guillaumebour/hugo-coder.git themes/coder
 ```
 
 ### Configuration
@@ -21,15 +42,23 @@ git clone https://github.com/luizdepra/hugo-coder.git themes/coder
 Add the following lines to your `config.toml`.
 
 ```toml
-theme = "coder" # set the theme
+theme = "coder"
 
-[params] # theme parameters
-    author = "John Doe" # author's name
-    info = "Full Stack DevOps and Magician" # author's job title or info
-    description = "John Doe's personal website" # site description
-    keywords = "blog,developer,personal" # site keywords
-    
-# Social links
+languagecode = "en"
+
+paginate = 20
+canonifyurls = true
+
+# disqusShortname = "yourdiscussshortname"
+
+[params]
+    author = "John Doe"
+    description = "John Doe's personal website"
+    keywords = "blog,developer,personal"
+    info = "Full Stack DevOps and Magician"
+    # info2 = "..."
+    avatarurl = "images/avatar.jpg"
+
 [[params.social]]
     name = "Github"
     weight = 1
@@ -43,18 +72,19 @@ theme = "coder" # set the theme
     weight = 3
     url = "https://www.linkedin.com/in/johndoe/"
 
-# Menu links
 [[menu.main]]
     name = "Blog"
     weight = 1
     url  = "/posts/"
 [[menu.main]]
-    name = "About"
+    name = "Gallery"
     weight = 2
+    url  = "/gallery/"
+[[menu.main]]
+    name = "About"
+    weight = 3
     url = "/about/"
 ```
-
-You can look at full working [`config.toml`](https://github.com/luizdepra/hugo-coder/blob/master/exampleSite/config.toml) inside the [exampleSite](https://github.com/luizdepra/hugo-coder/tree/master/exampleSite) folder.
 
 ### Build & Test
 
@@ -71,25 +101,37 @@ hugo server
 ```
 
 ### Disqus support
-Copy the following line to your config, ```disqusShortname = "yourdiscussshortname"``` This will enable disqs on all posts.
+Copy the following line to your config, ```disqusShortname = "yourdiscussshortname"```. 
+This will enable disqus on all posts.
  
 To disable comments for a post, add the following to the page meta data.
 ```disable_comments: true```
 
-## To Do
 
-- Comments (probably not Disqus, sorry)
+## Contribute
+
+### Using the exampleSite
+
+The exampleSite directory contains everything needed to work easily on the project.
+To populate the site with random texts and images just go in the `exampleSite` and run `python3 populate.py`.
+
+You can change the number of images that are downloaded by the script by changing the `NB_IMG` variable.
+
+### To Do
+
 - Tags, Categories and Series
+- Improving the picture's layout when displayed in "single" mode  
+
 
 ## License
 
-Coder is licensed under the [MIT license](https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.md).
+Coder is licensed under the [MIT license](https://github.com/guillaumebour/hugo-coder/blob/master/LICENSE.md).
 
-## Author
 
-[Luiz de Prá](https://luizdepra.com)
+## Authors
 
-## Special Thanks
+[Luiz de Prá](https://luizdepra.com) (author of the original project [hugo-coder](https://github.com/luizdepra/hugo-coder))   
+[Guillaume Bour](https://guillaumebour.fr)
 
-- Gleen McComb, for his great [article](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) about custom pagination.
-- All contributors, for every PR and Issue reported.
+Some code in this project is inspired from the original project but might have required changes.
+See the commit messages for more details.
