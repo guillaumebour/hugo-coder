@@ -21,7 +21,7 @@
                 <a href="/images/{{ .Params.Img_name }}"><img class="single-img" src="/images/{{ .Params.Img_name }}" alt="{{ .Title }}"></a>
             </div>
             <div class="right">
-                <h3>Want to know more about this picture ?</h3>
+                <h3>More information</h3>
                 {{ .Content }}
             </div>
         </div>
@@ -32,7 +32,7 @@
 
 
         {{ if and (.Params.Display_location) (.Params.Coordinates) }}
-            <h3>Where was this photo taken ?</h3>
+            <h3>Location</h3>
             <div id="map" class="map"></div>
         {{ end }}
     </article>
