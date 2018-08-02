@@ -14,6 +14,7 @@ canonifyurls = true
     description = "John Doe's personal website"
     keywords = "blog,developer,personal"
     info = "Full Stack DevOps and Magician"
+    # info2 = "..."
 
 [[params.social]]
     name = "Github"
