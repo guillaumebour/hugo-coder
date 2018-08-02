@@ -16,6 +16,7 @@ canonifyurls = true
     keywords = "blog,developer,personal"
     info = "Full Stack DevOps and Magician"
     # info2 = "..."
+    avatarurl = "images/avatar.jpg"
 
 [[params.social]]
     name = "Github"
